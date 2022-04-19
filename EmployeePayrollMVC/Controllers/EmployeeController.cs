@@ -29,7 +29,6 @@ namespace EmployeePayrollMVC.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Create([Bind] Employee employee)
         {
             if (ModelState.IsValid)
@@ -57,7 +56,6 @@ namespace EmployeePayrollMVC.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, [Bind] Employee employee)
         {
             if (id != employee.EmpId)
@@ -86,6 +84,29 @@ namespace EmployeePayrollMVC.Controllers
                 return NotFound();
             }
             return View(employee);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Employee employee = employeeBL.GetEmployeeData(id);
+
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int? id)
+        {
+            employeeBL.DeleteEmployee(id);
+            return RedirectToAction("Index");
         }
     }
 }
