@@ -13,6 +13,7 @@ namespace CommonLayer.Models
         [RegularExpression(@"^[A-Z]{1}[a-z]{2,}$", ErrorMessage = "Name is not valid")]
         public string Name { get; set; }
 
+        [DataType(DataType.ImageUrl)]
         public string ProfileImage { get; set; }
 
         [Required(ErrorMessage = "{0} should not be empty")]

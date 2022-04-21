@@ -7,6 +7,7 @@
 @*<h1>Details</h1>*@
 
 <form asp-action="Details">
+
 <div>
     <h4 class="form-head">Employee Details</h4>
     <hr />
@@ -63,6 +64,6 @@
 </div>
 <div class="buttons">
     @Html.ActionLink("Edit", "Edit", new { id = Model.EmpId }, new{@class="btn btn-primary"}) 
-    <a asp-action="Index" class="btn btn-primary tolist-button">Back to List</a>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
 </div>
 </form>

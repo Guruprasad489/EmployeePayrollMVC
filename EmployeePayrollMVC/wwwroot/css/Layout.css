@@ -1,9 +1,6 @@
 ﻿body {
     background-image: repeating-linear-gradient(#DBF8FC, #8EE4AF);
 }
-* {
-/*    box-sizing: border-box;
-*/}
 
 header {
     background: #ff0000;
@@ -21,16 +18,15 @@ footer {
 }
 
 .navbar-brand {
-    /*color: #42515f;*/
-    text-shadow: 1px 1px 2px gray ;
+    /*text-shadow: 1px 1px 2px gray ;*/
 }
     .navbar-brand:hover {
-        text-shadow: 1px 1px 2px black;
+        text-shadow: 1px 1px 2px gray;
         color: #42515f
     }
 
 .nav-item > .text-dark {
-    width: 75px;
+    min-width: 75px;
     text-align:center;
     color: #42515f;
     font-size:medium;
