@@ -3,12 +3,11 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="buttons">
+    <h4 class="form-head">Employee List</h4>
+    <a asp-action="Create" class="btn btn-primary Create-button">Create New</a>
+</div>
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -68,8 +67,8 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.EmpId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.EmpId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.EmpId })
+                @Html.ActionLink("Details", "Details", new { id=item.EmpId }) | 
+                @Html.ActionLink("Delete", "Delete", new { id=item.EmpId }, new {@class = "btn btn-danger"})
             </td>
         </tr>
 }

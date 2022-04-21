@@ -4,13 +4,17 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
 
-<h4>Employee</h4>
-<hr />
+@*<h4>Employee</h4>*@
+@*<hr />*@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
+            <div class="form-head">
+                <h4>Add Employee</h4>
+                <hr />
+            </div>
+            
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="EmpId" class="control-label"></label>
@@ -19,27 +23,27 @@
             </div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <input asp-for="Name" class="form-control" placeholder="Name Should start with Capital" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ProfileImage" class="control-label"></label>
-                <input asp-for="ProfileImage" class="form-control" />
+                <input type="file" asp-for="ProfileImage" class="form-control" />
                 <span asp-validation-for="ProfileImage" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
+                <input asp-for="Gender" class="form-control" placeholder="M / F"/>
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Dept" class="control-label"></label>
-                <input asp-for="Dept" class="form-control" />
+                <input asp-for="Dept" class="form-control" placeholder="Department"/>
                 <span asp-validation-for="Dept" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Salary" class="control-label"></label>
-                <input asp-for="Salary" class="form-control" />
+                <input asp-for="Salary" class="form-control" placeholder="Salary"/>
                 <span asp-validation-for="Salary" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -49,19 +53,20 @@
             </div>
             <div class="form-group">
                 <label asp-for="Notes" class="control-label"></label>
-                <input asp-for="Notes" class="form-control" />
+                <input asp-for="Notes" class="form-control" placeholder="Notes here"/>
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="buttons">
                 <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-primary tolist-button">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
+@*<div>
     <a asp-action="Index">Back to List</a>
-</div>
+</div>*@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
