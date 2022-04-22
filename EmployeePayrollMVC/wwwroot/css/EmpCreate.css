@@ -2,30 +2,25 @@
     
 }
 
-.row {
-    /*display: flex;
-    justify-content: space-evenly;*/
-    width: 90%;
-    padding-left: 20%;
+/*.row {
+    display: flex;
+    justify-content: center;
+}*/
+
+.col-md-12{
+    display:flex;
+    justify-content:center;
 }
 
-.col-md-4{ 
-}
-
-form {
-    min-width:700px;
+.form {
+    width: 65%;
     padding: 44px 60px;
     border: 1px solid rgb(228, 225, 225);
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 8px;
-    opacity: 1;
     margin-bottom: 50px;
 }
-
-/*.form{
-    width: 500px;
-}*/
 
 form:hover {
     box-shadow: 1px 1px 5px #82A70C;
@@ -53,8 +48,9 @@ form:hover {
 }
 
 .form-control {
-    align-items:flex-start;
-    max-width: 80%;
+    resize: vertical;
+    /*    max-width: 55%;
+*/
 }
 
 .text-danger{

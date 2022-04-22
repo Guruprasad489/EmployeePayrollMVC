@@ -27,7 +27,7 @@ namespace CommonLayer.Models
         public float Salary { get; set; }
 
         [Required(ErrorMessage = "{0} should not be empty")]
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         public DateTime Startdate { get; set; }
 
         public string Notes { get; set; }

@@ -4,12 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-
-@*<h4>Employee</h4>*@
-@*<hr />*@
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-md-12">
+        <form asp-action="Create" class="form">
             <div class="form-head">
                 <h4>Add Employee</h4>
                 <hr />
@@ -58,13 +55,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="Notes" class="control-label"></label>
-                <input asp-for="Notes" class="form-control" placeholder="Notes here"/>
+                <input type="text" asp-for="Notes" class="form-control" height="50px" placeholder="Notes here"/>
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
             <br />
             <div class="buttons">
                 <div class="submit-reset">
-                    <input type="submit" value="Create" class="btn btn-success" @*onclick="alert('Employee Created Successfully')"*@ />
+                    <input type="submit" value="Create" class="btn btn-success" />
                     <button type="reset" class="btn btn-secondary">Reset</button>
                 </div>
                 <a asp-action="Index" class="btn btn-primary">Back to List</a>
@@ -72,10 +69,6 @@
         </form>
     </div>
 </div>
-
-@*<div>
-    <a asp-action="Index">Back to List</a>
-</div>*@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

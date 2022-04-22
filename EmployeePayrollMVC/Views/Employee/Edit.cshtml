@@ -7,15 +7,15 @@
 @*<h1>Edit</h1>*@
 
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
+    <div class="col-md-12">
+        <form asp-action="Edit" class="form">
             <h4 class="form-head">Edit Employee Details</h4>
             <hr />
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="EmpId" class="control-label"></label>
-                <input asp-for="EmpId" class="form-control" disabled/>
+                <input asp-for="EmpId" class="form-control" readonly/>
                 <span asp-validation-for="EmpId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="ProfileImage" class="control-label"></label>
-                <input type="file" asp-for="ProfileImage" class="form-control" />
+                <input asp-for="ProfileImage" class="form-control" />
                 <span asp-validation-for="ProfileImage" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -50,7 +50,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Startdate" class="control-label"></label>
-                <input asp-for="Startdate" class="form-control" />
+                <input type="date" asp-for="Startdate" class="form-control" />
                 <span asp-validation-for="Startdate" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -60,7 +60,7 @@
             </div>
             <br />
             <div class="buttons">
-                <input type="submit" value="Save" class="btn btn-primary" @*onclick="alert('Saved Successfully')"*@/>
+                <input type="submit" value="Save" class="btn btn-primary"/>
                 <a asp-action="Index" class="btn btn-primary tolist-button">Back to List</a>
             </div>
         </form>
