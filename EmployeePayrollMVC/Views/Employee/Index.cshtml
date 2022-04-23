@@ -48,7 +48,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ProfileImage)
+                <img src="@Url.Content(item.ProfileImage)" width="36" height="36" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Gender)

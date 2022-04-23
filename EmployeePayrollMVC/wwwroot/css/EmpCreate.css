@@ -43,7 +43,14 @@ form:hover {
     font-weight: 500;
 }
 
-.control-label{
+.row-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.control-label {
     width: 20%;
 }
 
@@ -51,6 +58,9 @@ form:hover {
     resize: vertical;
     /*    max-width: 55%;
 */
+}
+.fcf-width{
+    width:250px;
 }
 
 .text-danger{
@@ -74,6 +84,24 @@ input:invalid{
     box-shadow: 0px 0px 10px gray;
     text-shadow:none;
 }
+
+.profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-left: 2px;
+    margin-right:10px;
+}
+
+.profile:hover {
+        border: 2px solid black;
+        box-shadow: 0px 0px 15px #82A70C;
+}
+
+.form-control-file > label{
+    margin-bottom:0px;
+}
+
 
 /*.nohover {
     pointer-events: none;

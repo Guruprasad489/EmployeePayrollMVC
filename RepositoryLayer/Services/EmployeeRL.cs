@@ -30,6 +30,7 @@ namespace RepositoryLayer.Services
 
                     cmd.Parameters.AddWithValue("@Name", employee.Name);
                     cmd.Parameters.AddWithValue("@ProfileImage", employee.ProfileImage);
+                    //cmd.Parameters.AddWithValue("@ProfileImage", employee.ProfileImage == null ? "~/Assets/profile-images/No_Profile.png" : "~/Assets/profile-images/" + employee.ProfileImage);
                     cmd.Parameters.AddWithValue("@Gender", employee.Gender);
                     cmd.Parameters.AddWithValue("@Dept", employee.Dept);
                     cmd.Parameters.AddWithValue("@Salary", employee.Salary);
@@ -69,6 +70,7 @@ namespace RepositoryLayer.Services
                     cmd.Parameters.AddWithValue("@EmpId", employee.EmpId);
                     cmd.Parameters.AddWithValue("@Name", employee.Name);
                     cmd.Parameters.AddWithValue("@ProfileImage", employee.ProfileImage);
+                    //cmd.Parameters.AddWithValue("@ProfileImage", employee.ProfileImage == null ? BDNull : "~/Assets/profile-images/" + employee.ProfileImage);
                     cmd.Parameters.AddWithValue("@Gender", employee.Gender);
                     cmd.Parameters.AddWithValue("@Dept", employee.Dept);
                     cmd.Parameters.AddWithValue("@Salary", employee.Salary);
@@ -187,7 +189,6 @@ namespace RepositoryLayer.Services
         //To Delete the record on a particular employee
         public string DeleteEmployee(int? id)
         {
-
             using (SqlConnection con = new SqlConnection(configuration["ConnectionString:EmpPayrollMVC"]))
             {
                 try

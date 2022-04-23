@@ -31,28 +31,42 @@ namespace EmployeePayrollMVC.Controllers
         [HttpPost]
         public IActionResult Create([Bind] Employee employee)
         {
-            if (ModelState.IsValid)
+            try
             {
-                employeeBL.AddEmployee(employee);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    employeeBL.AddEmployee(employee);
+                    return RedirectToAction("Index");
+                }
+                return View(employee);
             }
-            return View(employee);
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
         }
 
         [HttpGet]
         public IActionResult Edit(int? id)
         {
-            if (id == null)
+            try
             {
-                return NotFound();
-            }
-            Employee employee = employeeBL.GetEmployeeData(id);
+                if (id == null)
+                {
+                    return NotFound();
+                }
+                Employee employee = employeeBL.GetEmployeeData(id);
 
-            if (employee == null)
-            {
-                return NotFound();
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                return View(employee);
             }
-            return View(employee);
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
         }
 
         [HttpPost]

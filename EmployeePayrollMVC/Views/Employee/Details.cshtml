@@ -27,7 +27,8 @@
             @Html.DisplayNameFor(model => model.ProfileImage)
         </dt>
         <dd class = "col-sm-9">
-            @Html.DisplayFor(model => model.ProfileImage)
+            @*@Html.DisplayFor(model => model.ProfileImage)*@
+            <img src="@Url.Content(@Model.ProfileImage)" width="50" height="50" />
         </dd>
         <dt class = "col-sm-3">
             @Html.DisplayNameFor(model => model.Gender)

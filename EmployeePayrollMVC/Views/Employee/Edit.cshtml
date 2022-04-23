@@ -23,10 +23,46 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group" style="margin-bottom:0px">
                 <label asp-for="ProfileImage" class="control-label"></label>
-                <input asp-for="ProfileImage" class="form-control" />
+                <div class="form-group form-control-file">
+                <input type="file" asp-for="ProfileImage" class="form-control-file fcf-width" value="choose" />
+                <label>( @Html.DisplayFor(model => model.ProfileImage) )</label>
+                </div>
                 <span asp-validation-for="ProfileImage" class="text-danger"></span>
+            </div>*@
+             <div class="form-group">
+                <label for="ProfileImage" class="control-label">Profile Image</label>
+                <div class="form-control-file">
+                    <label asp-for="ProfileImage">
+                        <input type="radio" asp-for="ProfileImage" value="~/Assets/profile-images/No_Profile.png" required>
+                        <img class="profile" id="NoProfile" src="~/Assets/profile-images/No_Profile.png">
+                    </label>
+                    <label asp-for="ProfileImage">
+                        <input type="radio" asp-for="ProfileImage" value="~/Assets/profile-images/Ellipse -1.png" required>
+                        <img class="profile" id="image1" src="~/Assets/profile-images/Ellipse -1.png">
+                    </label>
+                    <label asp-for="ProfileImage">
+                        <input type="radio" asp-for="ProfileImage" value="~/Assets/profile-images/Ellipse -2.png" required>
+                        <img class="profile" id="image2" src="~/Assets/profile-images/Ellipse -2.png">
+                    </label>
+                    <label asp-for="ProfileImage">
+                        <input type="radio" asp-for="ProfileImage" value="~/Assets/profile-images/Ellipse -3.png" required>
+                        <img class="profile" id="image3" src="~/Assets/profile-images/Ellipse -3.png">
+                    </label>
+                    <label asp-for="ProfileImage">
+                        <input type="radio" asp-for="ProfileImage" value="~/Assets/profile-images/Ellipse -4.png" required>
+                        <img class="profile" id="image4" src="~/Assets/profile-images/Ellipse -4.png">
+                    </label>
+                    <label asp-for="ProfileImage">
+                        <input type="radio" asp-for="ProfileImage" value="~/Assets/profile-images/Ellipse -5.png" required>
+                        <img class="profile" id="image5" src="~/Assets/profile-images/Ellipse -5.png">
+                    </label>
+                    <label asp-for="ProfileImage">
+                        <input type="radio" asp-for="ProfileImage" value="~/Assets/profile-images/Ellipse -7.png" required>
+                        <img class="profile" id="image6" src="~/Assets/profile-images/Ellipse -7.png">
+                    </label>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="Gender" class="control-label"></label>
@@ -55,7 +91,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Notes" class="control-label"></label>
-                <input asp-for="Notes" class="form-control" />
+                <textarea asp-for="Notes" class="form-control" ></textarea>
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
             <br />

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePayrollMVC", "EmployeePayrollMVC\EmployeePayrollMVC.csproj", "{8D47DA03-FAFE-4CA0-92E8-220139CBC877}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePayrollMVC", "EmployeePayrollMVC\EmployeePayrollMVC.csproj", "{8D47DA03-FAFE-4CA0-92E8-220139CBC877}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLayer", "CommonLayer\CommonLayer.csproj", "{823C25AB-CFA0-47FF-A5B0-82DD737E3404}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLayer", "CommonLayer\CommonLayer.csproj", "{823C25AB-CFA0-47FF-A5B0-82DD737E3404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{3996749A-E761-4F34-BBBB-077A1AB9D1C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{3996749A-E761-4F34-BBBB-077A1AB9D1C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{F881E302-CD32-4AF7-A4AC-C13D83055B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{F881E302-CD32-4AF7-A4AC-C13D83055B9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
