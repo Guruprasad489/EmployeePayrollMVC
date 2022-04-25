@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="~/css/EmpCreate.css" />
     <link rel="stylesheet" href="~/css/EmpDetails.css" />
     <link rel="stylesheet" href="~/css/EmpIndex.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
 <body>
     <header>
@@ -24,16 +26,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><h5>Home</h5></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><h5 data-toggle="tooltip" data-placement="top" title="Home"><i style='font-size:1.2rem' class='fas'>&#xf015;</i> Home</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Create"><h5>NewEmployee</h5></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Create" data-toggle="tooltip" data-placement="top" title="Add New Employee"><h5><i style='font-size:1.2rem' class='fas'>&#xf234;</i> NewEmployee</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Index"><h5>EmployeeList</h5></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Index" data-toggle="tooltip" data-placement="top" title="Go to Employee List"><h5>EmployeeList</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><h5>Privacy</h5></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy" data-toggle="tooltip" data-placement="top" title="Privacy Policy"><h5>Privacy</h5></a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +46,7 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    </div>    
 
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -54,6 +56,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/notify.min.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

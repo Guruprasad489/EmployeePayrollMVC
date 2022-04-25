@@ -22,8 +22,12 @@ table th:last-child {
     overflow-wrap:normal;
 }
 
-.col-width{
+th{
     max-width: 250px !important;
+    min-width:100px;
+}
+td:last-child{
+    min-width: 195px;
 }
 
 thead {
@@ -37,9 +41,9 @@ tbody tr:hover {
     border-radius: 10px 10px 10px 10px;
 }
 
-.btn-delete, .btn-edit, .btn-details{
+/*.btn-delete, .btn-edit, .btn-details{
     padding: .5em;
     padding-top:.25em;
     padding-bottom:.25em;
-}
+}*/
 

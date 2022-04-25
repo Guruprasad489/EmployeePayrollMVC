@@ -78,7 +78,14 @@
             </div>
             <div class="form-group">
                 <label asp-for="Salary" class="control-label"></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i>&#x20B9</i>
+                        </div>
+                    </div>
                 <input asp-for="Salary" class="form-control" placeholder="Salary"/>
+                </div>
                 <span asp-validation-for="Salary" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -94,10 +101,10 @@
             <br />
             <div class="buttons">
                 <div class="submit-reset">
-                    <input type="submit" value="Create" class="btn btn-success" />
-                    <button type="reset" class="btn btn-secondary">Reset</button>
+                    <input type="submit" value="Create" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Add/Create Employee"/>
+                    <button type="reset" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Reset the form entries">Reset</button>
                 </div>
-                <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                <a asp-action="Index" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Go to Employee List"><i style='font-size:1rem' class='fas'>&#xf359;</i> Back to List</a>
             </div>
         </form>
     </div>

@@ -28,7 +28,7 @@
         </dt>
         <dd class = "col-sm-9">
             @*@Html.DisplayFor(model => model.ProfileImage)*@
-            <img src="@Url.Content(@Model.ProfileImage)" width="50" height="50" />
+            <img src="@Url.Content(Model.ProfileImage)" width="50" height="50" />
         </dd>
         <dt class = "col-sm-3">
             @Html.DisplayNameFor(model => model.Gender)
@@ -43,7 +43,7 @@
             @Html.DisplayFor(model => model.Dept)
         </dd>
         <dt class = "col-sm-3">
-            @Html.DisplayNameFor(model => model.Salary)
+            @Html.DisplayNameFor(model => model.Salary) (&#x20B9)
         </dt>
         <dd class = "col-sm-9">
             @Html.DisplayFor(model => model.Salary)
@@ -64,7 +64,7 @@
 </div>
 <div class="buttons">
     @Html.ActionLink("Edit", "Edit", new { id = Model.EmpId }, new{@class="btn btn-primary"}) 
-    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    <a asp-action="Index" class="btn btn-primary"><i style='font-size:1rem' class='fas'>&#xf359;</i> Back to List</a>
 </div>
 </form>
 </div>

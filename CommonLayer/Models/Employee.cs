@@ -15,7 +15,7 @@ namespace CommonLayer.Models
         public string Name { get; set; }
 
         //[DataType(DataType.ImageUrl)]
-        //[DefaultValue("~/Assets/profile-images/No_Profile.png")]
+        [DisplayName("Profile Image")]
         public string ProfileImage { get; set; }
 
         [Required(ErrorMessage = "{0} should not be empty")]
@@ -30,6 +30,7 @@ namespace CommonLayer.Models
 
         [Required(ErrorMessage = "{0} should not be empty")]
         [DataType(DataType.Date)]
+        [DisplayName("Start date")]
         public DateTime Startdate { get; set; }
 
         public string Notes { get; set; }
